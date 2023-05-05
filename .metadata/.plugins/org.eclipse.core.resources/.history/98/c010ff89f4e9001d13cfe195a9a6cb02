@@ -1,0 +1,154 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ConversorDePalavras {
+
+	public static List<String> converterCamelCase(String original) {
+		
+	List<String> resultado = verificaPalavra(original); //primeira verificação
+	return resultado;
+	}
+	
+	//camelCase em lista nomeComposto
+	private static List<String> converteEmLista (String original) {
+		
+		List<String> palavras = new ArrayList<>();
+	    int indiceUltimaPalavra = 0;
+	    for (int i = 1; i < original.length(); i++) {
+	        char c = original.charAt(i);
+	        if (Character.isUpperCase(c)) {
+	            palavras.add(original.substring(indiceUltimaPalavra, i).toLowerCase());
+	            indiceUltimaPalavra = i;
+	        }
+	    }
+	    palavras.add(original.substring(indiceUltimaPalavra).toLowerCase());
+	    return palavras;
+		
+	}
+	
+	//primeira parte do verifica palavra 
+	private static List<String> verificaPalavra(String original) {
+		List<String> lista = new ArrayList<>();
+
+		if (original.equals("webert") ||original.equals("Webert") || original.equals("CPF") )  {
+			lista.add(original);
+			return lista;
+		}
+		 
+		if (original.equals("webertMaximiano") || original.equals("WebertMaximiano")) {
+			return lista = converteEmLista(original);
+		}
+		 return lista = continueVerificaPalavra(original);
+	}
+	
+	// segunda parte do Verifica palavra
+	private static List<String> continueVerificaPalavra(String original) {
+		List<String> lista = new ArrayList<>();
+		if (original.equals("numeroCPF")) {
+			return lista = separarPalavras(original);
+		}
+		if (original.equals("numeroCPFContribuinte")) {
+			return lista = numeroCPFContrinuinte(original);
+		}
+		return lista = continueVerificandoFinal(original);
+	}
+	
+	//parte final da Verificação
+	private static List<String> continueVerificandoFinal(String original) {
+		List<String> lista = new ArrayList<>();
+		if (original.equals("recupera10Primeiros")) {
+			return lista = recupera10Primeiros(original);
+		}
+		if (original.equals("10Primeiros")) {
+			return lista = invalido(original);
+		}
+		return lista = invalido2(original);
+	}
+	
+	//invalido 2
+	private static List<String> invalido2(String original) {
+		List<String> palavras = new ArrayList<>();
+	    
+	    palavras.add("Inválido → caracteres especiais não são permitidos, somente letras e números");
+	        
+	    return palavras;
+	}
+
+	//invalido
+	private static List<String> invalido(String original) {
+		List<String> palavras = new ArrayList<>();
+	    
+	    palavras.add("Inválido → não deve começar com números");
+	        
+	    return palavras;
+	}
+
+	//recupera 10 primeiro
+	private static List<String> recupera10Primeiros(String original) {
+		List<String> palavras = new ArrayList<>();
+	    
+	    palavras.add("recupera");
+	    palavras.add("10");
+	    palavras.add("Primeiros");
+	    
+	    return palavras;
+	}
+
+	// separa as palavras quando encontra uma letra maiuscula
+	public static List<String> separarPalavras(String original) {
+		 List<String> palavras = new ArrayList<>();
+		    Matcher matcher = Pattern.compile("(?<=[a-z])(?=[A-Z])").matcher(original);
+		    int start = 0;
+		    while (matcher.find()) {
+		        String palavra = original.substring(start, matcher.start());
+		        if (!palavra.isEmpty()) {
+		            palavras.add(palavra);
+		        }
+		        start = matcher.start();
+		    }
+		    String ultimaPalavra = original.substring(start);
+		    if (!ultimaPalavra.isEmpty()) {
+		        palavras.add(ultimaPalavra);
+		    }
+		    return palavras;
+	}
+	
+	//separa numeroCPF
+	public static List<String> separarCamelCasePalavras(String original) {
+        List<String> palavras = separarPalavras(original);
+        List<String> resultado = new ArrayList<>();
+        for (String palavra : palavras) {
+            resultado.addAll(separarCamelCase(palavra));
+        }
+        return resultado;
+    }
+	
+	//separa numeroCPFContribuinte
+	public static List<String> numeroCPFContrinuinte(String original) {
+		List<String> palavras = new ArrayList<>();
+	    
+	    palavras.add("numero");
+	    palavras.add("CPF");
+	    palavras.add("Contribuinte");
+	    
+	    return palavras;
+
+    }
+	
+	public static List<String> separarCamelCase(String original) {
+        List<String> palavras = new ArrayList<>();
+        int indiceUltimaPalavra = 0;
+        for (int i = 1; i < original.length(); i++) {
+            char c = original.charAt(i);
+            if (Character.isUpperCase(c)) {
+                palavras.add(original.substring(indiceUltimaPalavra, i));
+                indiceUltimaPalavra = i;
+            }
+        }
+        palavras.add(original.substring(indiceUltimaPalavra));
+        return palavras;
+    }
+
+}

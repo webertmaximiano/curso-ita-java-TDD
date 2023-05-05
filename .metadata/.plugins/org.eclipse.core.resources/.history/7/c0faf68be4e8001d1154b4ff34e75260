@@ -1,0 +1,14 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestePilha {
+
+	@Test
+	public void testPilhaVazia() {
+		Pilha p = new Pilha(); // instancia a classe
+		assertTrue(p.estaVazia()); // é verdade que está vazia
+		assertEquals(0, p.tamanho()); //retorno igual a zero
+	}
+
+}

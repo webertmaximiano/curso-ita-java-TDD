@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * @author weber
+ *
+ */
+module CamelCase {
+	requires junit;
+}

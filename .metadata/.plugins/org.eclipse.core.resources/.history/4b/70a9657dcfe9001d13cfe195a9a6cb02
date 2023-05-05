@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ConversorDePalavras {
+
+	public static List<String> converterCamelCase(String original) {
+		
+		List<String> palavras = new ArrayList<>();
+		
+	    if (estaNoFormatoCamelCase(original)) {
+	    	
+	    	palavras = converteEmLista(original);
+	    }
+		  return palavras;
+	}
+	
+	public static List<String> converteEmLista (String original) {
+		
+		List<String> palavras = new ArrayList<>();
+	    int indiceUltimaPalavra = 0;
+	    for (int i = 1; i < original.length(); i++) {
+	        char c = original.charAt(i);
+	        if (Character.isUpperCase(c)) {
+	            palavras.add(original.substring(indiceUltimaPalavra, i).toLowerCase());
+	            indiceUltimaPalavra = i;
+	        }
+	    }
+	    palavras.add(original.substring(indiceUltimaPalavra).toLowerCase());
+	    return palavras;
+		
+	}
+	
+	private static boolean estaNoFormatoCamelCase(String original) {
+		// Verifica se a string está minúscula
+	    if (!Character.isUpperCase(original.charAt(0))) {
+	        return false;
+	    } 
+		
+		return true;
+	}
+
+}

@@ -1,0 +1,34 @@
+	import static org.junit.Assert.*;
+	import java.util.Arrays;
+	import java.util.List;
+	
+	import org.junit.Test;
+	
+	public class TesteCamelCase {
+	       
+	    @Test
+	    public void ConverterCamelCaseParaLista() {
+	        String palavra = "webert";
+	        List<String> lista = Arrays.asList("webert");
+	        List<String> resultado = ConversorDePalavras.converterCamelCase(palavra); // invocando um metodo estatico Classe.metodo()
+	        assertEquals(lista, resultado);
+	    }
+	    @Test
+	    public void ConverterCamelCaseParaListaPrimeiraLetraMaiuscula() {
+	        String palavra = "Webert";
+	        List<String> lista = Arrays.asList("webert");
+	        List<String> resultado = ConversorDePalavras.converterCamelCase(palavra);
+	        assertEquals(lista, resultado);
+	    }
+	    
+	    @Test
+	    public void ConverterCamelCaseParaListaNomeComposto() {
+	        String palavra = "webertMaximiano";
+	        List<String> lista = Arrays.asList("webert", "maximiano");
+	        List<String> resultado = ConversorDePalavras.converterCamelCase(palavra);
+	        System.out.println(resultado);
+	        assertEquals(lista, resultado);
+	    }
+	    
+	
+	}

@@ -1,0 +1,88 @@
+2023-05-02 09:18:13,238 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-05-03 08:20:14,350 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-03 10:19:11,186 [Worker-45: reload maven project] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM F:\www\curso\ita-java\TDD\CamelCase\pom.xml: input contained no data @ 
+
+org.apache.maven.project.ProjectBuildingException: Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM F:\www\curso\ita-java\TDD\CamelCase\pom.xml: input contained no data @ 
+
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readMavenProjects(IMavenToolbox.java:131)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$20(ProjectRegistryManager.java:902)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:275)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectsWithDependencies(ProjectRegistryManager.java:898)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:214)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:105)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:239)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:708)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$4.run(MavenPomEditor.java:1028)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2023-05-03 10:19:25,934 [Worker-45: reload maven project] ERROR o.e.m2e.editor.pom.MavenPomEditor - failed to load maven project for org.eclipse.ui.part.FileEditorInput(/CamelCase/pom.xml)
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:876)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectCache$CacheLine.lambda$1(MavenProjectCache.java:192)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectCache$CacheLine.getProject(MavenProjectCache.java:191)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectCache.getMavenProject(MavenProjectCache.java:105)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$22(ProjectRegistryManager.java:1063)
+	at java.base/java.util.Map.computeIfAbsent(Map.java:1054)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1062)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:289)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:241)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:708)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$4.run(MavenPomEditor.java:1028)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2023-05-03 10:19:54,567 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2023-05-03 10:20:15,864 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606 [273])
+2023-05-03 10:20:15,907 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606
+2023-05-03 10:20:15,908 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\aether-connector-okhttp-0.17.8.jar
+2023-05-03 10:20:15,909 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\commons-lang3-3.8.1.jar
+2023-05-03 10:20:15,910 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\guice-4.2.2-no_aop.jar
+2023-05-03 10:20:15,910 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\jansi-2.4.0.jar
+2023-05-03 10:20:15,911 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-artifact-3.8.7.jar
+2023-05-03 10:20:15,911 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-builder-support-3.8.7.jar
+2023-05-03 10:20:15,913 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-compat-3.8.7.jar
+2023-05-03 10:20:15,913 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-core-3.8.7.jar
+2023-05-03 10:20:15,914 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-embedder-3.8.7.jar
+2023-05-03 10:20:15,916 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-model-3.8.7.jar
+2023-05-03 10:20:15,917 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-model-builder-3.8.7.jar
+2023-05-03 10:20:15,917 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-plugin-api-3.8.7.jar
+2023-05-03 10:20:15,918 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-repository-metadata-3.8.7.jar
+2023-05-03 10:20:15,918 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-api-1.6.3.jar
+2023-05-03 10:20:15,918 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-connector-basic-1.6.3.jar
+2023-05-03 10:20:15,919 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-impl-1.6.3.jar
+2023-05-03 10:20:15,919 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-provider-3.8.7.jar
+2023-05-03 10:20:15,920 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-spi-1.6.3.jar
+2023-05-03 10:20:15,920 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-transport-wagon-1.6.3.jar
+2023-05-03 10:20:15,921 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-util-1.6.3.jar
+2023-05-03 10:20:15,921 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-settings-3.8.7.jar
+2023-05-03 10:20:15,921 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-settings-builder-3.8.7.jar
+2023-05-03 10:20:15,922 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-shared-utils-3.3.4.jar
+2023-05-03 10:20:15,922 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\okhttp-3.14.1.jar
+2023-05-03 10:20:15,923 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\okio-1.17.3.jar
+2023-05-03 10:20:15,924 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\org.eclipse.sisu.inject-0.3.5.jar
+2023-05-03 10:20:15,924 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\org.eclipse.sisu.plexus-0.3.5.jar
+2023-05-03 10:20:15,925 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-build-api-0.0.7.jar
+2023-05-03 10:20:15,925 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-cipher-2.0.jar
+2023-05-03 10:20:15,926 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-classworlds-2.6.0.jar
+2023-05-03 10:20:15,926 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-component-annotations-2.1.0.jar
+2023-05-03 10:20:15,927 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-interpolation-1.26.jar
+2023-05-03 10:20:15,927 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-sec-dispatcher-2.0.jar
+2023-05-03 10:20:15,928 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-utils-3.3.1.jar
+2023-05-03 10:20:15,928 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\wagon-file-3.5.3.jar
+2023-05-03 10:20:15,929 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\wagon-provider-api-3.5.3.jar
+2023-05-03 10:20:15,932 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_31.1.0.jre [9])
+2023-05-03 10:20:15,934 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\com.google.guava_31.1.0.jre.jar
+2023-05-03 10:20:15,934 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_1.7.36 [441])
+2023-05-03 10:20:15,936 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\slf4j.api_1.7.36.jar
+2023-05-03 10:20:15,936 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [21])
+2023-05-03 10:20:15,939 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\javax.inject_1.0.0.v20220405-0441.jar
+2023-05-03 10:20:15,939 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20221203-1659 [19])
+2023-05-03 10:20:15,942 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\javax.annotation_1.3.5.v20221203-1659.jar
+2023-05-03 10:20:15,942 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.4.0.v20221112-0806 [41])
+2023-05-03 10:20:15,944 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\org.apache.commons.cli_1.4.0.v20221112-0806.jar
+2023-05-03 10:20:15,944 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.1 [11])
+2023-05-03 10:20:15,946 [Worker-45: Launching CamelCase] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\weber\.p2\pool\plugins\com.google.guava.failureaccess_1.0.1.jar
+2023-05-03 10:20:15,953 [Worker-45: Launching CamelCase] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\www\curso\ita-java\TDD\CamelCase":
+2023-05-03 10:20:15,953 [Worker-45: Launching CamelCase] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always 

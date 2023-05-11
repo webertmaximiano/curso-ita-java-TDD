@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Refatoracao/Refatoracao.iml" filepath="$PROJECT_DIR$/Refatoracao/Refatoracao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Refatoracao/SAB/SAB.iml" filepath="$PROJECT_DIR$/Refatoracao/SAB/SAB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TradutorDePalavras/TradutorDePalavras.iml" filepath="$PROJECT_DIR$/TradutorDePalavras/TradutorDePalavras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/curso-ita-java-TDD.iml" filepath="$PROJECT_DIR$/curso-ita-java-TDD.iml" />
+    </modules>
+  </component>
+</project>

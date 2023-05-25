@@ -1,0 +1,8 @@
+<gamificacao>
+  <usuario nome="guerra">
+    <ponto tipo="estrela" quantidade="10" />
+  </usuario>
+  <usuario nome="fernandes">
+    <ponto tipo="moeda" quantidade="5" />
+  </usuario>
+</gamificacao>

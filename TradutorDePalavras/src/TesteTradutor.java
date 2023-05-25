@@ -1,14 +1,16 @@
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 public class TesteTradutor {
 	
 	private Tradutor t;
 	
-	@Before // executa antes de cada teste
+	@BeforeEach// executa antes de cada teste
 	public void criaTradutor() {
 		t= new Tradutor();
 	}
